@@ -39,6 +39,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.clId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clTelefone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lbNome
@@ -102,12 +106,20 @@
             // 
             // lstContatos
             // 
+            this.lstContatos.AllowColumnReorder = true;
+            this.lstContatos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clId,
+            this.clNome,
+            this.clTelefone,
+            this.clEmail});
+            this.lstContatos.GridLines = true;
             this.lstContatos.HideSelection = false;
             this.lstContatos.Location = new System.Drawing.Point(259, 87);
             this.lstContatos.Name = "lstContatos";
             this.lstContatos.Size = new System.Drawing.Size(500, 297);
             this.lstContatos.TabIndex = 7;
             this.lstContatos.UseCompatibleStateImageBehavior = false;
+            this.lstContatos.View = System.Windows.Forms.View.Details;
             // 
             // label1
             // 
@@ -135,6 +147,26 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // clId
+            // 
+            this.clId.Text = "ID";
+            this.clId.Width = 40;
+            // 
+            // clNome
+            // 
+            this.clNome.Text = "Nome";
+            this.clNome.Width = 100;
+            // 
+            // clTelefone
+            // 
+            this.clTelefone.Text = "Telefone";
+            this.clTelefone.Width = 75;
+            // 
+            // clEmail
+            // 
+            this.clEmail.Text = "E-mail";
+            this.clEmail.Width = 110;
             // 
             // Form1
             // 
@@ -172,6 +204,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.ColumnHeader clId;
+        private System.Windows.Forms.ColumnHeader clNome;
+        private System.Windows.Forms.ColumnHeader clTelefone;
+        private System.Windows.Forms.ColumnHeader clEmail;
     }
 }
 

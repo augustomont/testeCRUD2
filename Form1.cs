@@ -25,25 +25,31 @@ namespace testeCRUD2
         {
             try
             {
-                
+                //Open connection using MySql documentation partten
                 Conexao = new MySqlConnection(data_source);
-
-                string sql = "INSERT INTO contato (nome, telefone, email) " + "VALUES " + "('" + txtNome.Text + "', '" + txtTelefone.Text + "', '" + txtEmail.Text + "')";
-
-                MySqlCommand comando = new MySqlCommand(sql, Conexao);
-
                 Conexao.Open();
 
-                comando.ExecuteReader();
+                string query = "INSERT INTO contato VALUES (NULL, @nome, @telefone, @email)";//Comando.CommandText
 
-                MessageBox.Show("Deu tudo certo!");
+                //set comands
+                MySqlCommand Comando;
+                Comando = new MySqlCommand(query, Conexao);// receive values of (Comando.CommandText, Comando.Connection)
+                Comando.Parameters.Clear();
+                Comando.Parameters.AddWithValue("@nome", txtNome.Text);
+                Comando.Parameters.AddWithValue("@telefone", txtTelefone.Text);
+                Comando.Parameters.AddWithValue("@email", txtEmail.Text);
+                Comando.ExecuteNonQuery();
 
-            }catch(Exception ex)
+                MessageBox.Show("Contato salvo!");
+
+            
+            }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }finally
+            }
+            finally
             {
-                Conexao.Close();   
+                Conexao.Close();
             }
 
         }
@@ -62,7 +68,7 @@ namespace testeCRUD2
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
-                lstContatos.Clear();
+                lstContatos.Items.Clear();
 
                 while (reader.Read())
                 {
