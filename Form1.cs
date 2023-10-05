@@ -60,7 +60,23 @@ namespace testeCRUD2
 
                 Conexao.Open();
 
-                comando.ExecuteReader();
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                lstContatos.Clear();
+
+                while (reader.Read())
+                {
+                    string[] row =
+                    {
+                        reader.GetString(0),
+                        reader.GetString(1),
+                        reader.GetString(2),
+                        reader.GetString(3),
+                    };
+
+                    var linha_listview = new ListViewItem(row);
+                    lstContatos.Items.Add(linha_listview);
+                }
 
                 MessageBox.Show("DEu certo!");
 
