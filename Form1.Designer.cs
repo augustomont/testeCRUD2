@@ -36,13 +36,13 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.lstContatos = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.clId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clTelefone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbNome
@@ -121,6 +121,26 @@
             this.lstContatos.UseCompatibleStateImageBehavior = false;
             this.lstContatos.View = System.Windows.Forms.View.Details;
             // 
+            // clId
+            // 
+            this.clId.Text = "ID";
+            this.clId.Width = 40;
+            // 
+            // clNome
+            // 
+            this.clNome.Text = "Nome";
+            this.clNome.Width = 100;
+            // 
+            // clTelefone
+            // 
+            this.clTelefone.Text = "Telefone";
+            this.clTelefone.Width = 75;
+            // 
+            // clEmail
+            // 
+            this.clEmail.Text = "E-mail";
+            this.clEmail.Width = 110;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -148,26 +168,6 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // clId
-            // 
-            this.clId.Text = "ID";
-            this.clId.Width = 40;
-            // 
-            // clNome
-            // 
-            this.clNome.Text = "Nome";
-            this.clNome.Width = 100;
-            // 
-            // clTelefone
-            // 
-            this.clTelefone.Text = "Telefone";
-            this.clTelefone.Width = 75;
-            // 
-            // clEmail
-            // 
-            this.clEmail.Text = "E-mail";
-            this.clEmail.Width = 110;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -185,7 +185,7 @@
             this.Controls.Add(this.lbTelefone);
             this.Controls.Add(this.lbNome);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Agenda de Contatos";
             this.ResumeLayout(false);
             this.PerformLayout();
 
