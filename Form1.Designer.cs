@@ -112,9 +112,11 @@
             this.clNome,
             this.clTelefone,
             this.clEmail});
+            this.lstContatos.FullRowSelect = true;
             this.lstContatos.GridLines = true;
             this.lstContatos.HideSelection = false;
             this.lstContatos.Location = new System.Drawing.Point(259, 87);
+            this.lstContatos.MultiSelect = false;
             this.lstContatos.Name = "lstContatos";
             this.lstContatos.Size = new System.Drawing.Size(500, 297);
             this.lstContatos.TabIndex = 7;
@@ -185,6 +187,7 @@
             this.Controls.Add(this.lbTelefone);
             this.Controls.Add(this.lbNome);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agenda de Contatos";
             this.ResumeLayout(false);
             this.PerformLayout();
